@@ -1,0 +1,268 @@
+.navbar-default {
+    background: #9acfea;
+}
+.navbar-default li a {
+    color: black !important;
+}
+.navbar-default .navbar-brand {
+    color: #000;
+    font-size: 25px;
+}
+
+.footer {
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*height: 60px;*/
+    /*line-height: 60px;*/
+    padding: 1% 0;
+    background-color: #f5f5f5;
+    color: #black;
+    margin-top: 2%;
+}
+
+body {
+    background:  no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.formh {
+    margin-top: 15%;
+    border: 2px solid darkgrey;
+    border-radius: 8px;
+    padding: 8%;
+}
+
+.formh .form-control {
+    width: 75%;
+}
+
+#profil {
+    padding: 5%;
+    background: rgba(50,50,50,0.5);
+    border-radius: 8px;
+    color: #fff;
+}
+
+#profil ul {
+    color: #000;
+}
+
+#myTab li a:hover {
+    cursor: pointer;
+}
+
+tags-input .tags .input {
+    color: #000;
+}
+
+.mb5{
+    margin-bottom:5%;
+}
+
+.mt5{
+    margin-top:5%;
+}
+
+
+
+/*
+    CHAT
+*/
+
+.member_list .chat-body {
+    margin-left: 47px;
+    margin-top: 0;
+}
+.top_nav {
+    overflow: visible;
+}
+.member_list .contact_sec {
+    margin-top: 3px;
+}
+.member_list li {
+    padding: 6px;
+}
+.member_list ul {
+    border: 1px solid #dddddd;
+}
+.chat-img img {
+    height: 34px;
+    width: 34px;
+}
+.member_list li {
+    border-bottom: 1px solid #dddddd;
+    padding: 6px;
+}
+.member_list li:last-child {
+    border-bottom:none;
+}
+.member_list {
+    height: 380px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.message_section {
+    border: 1px solid #dddddd;
+}
+.chat_area {
+    float: left;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+.chat_area li {
+    padding: 14px 14px 0;
+}
+.chat_area li .chat-img1 img {
+    height: 40px;
+    width: 40px;
+}
+.chat_area .chat-body1 {
+    margin-left: 50px;
+}
+.chat-body1 p {
+    background: #fbf9fa none repeat scroll 0 0;
+    padding: 10px;
+}
+.chat_area .admin_chat .chat-body1 {
+    margin-left: 0;
+    margin-right: 50px;
+}
+.chat_area li:last-child {
+    padding-bottom: 10px;
+}
+.message_write {
+    background: #f5f3f3 none repeat scroll 0 0;
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+
+.message_write textarea.form-control {
+    height: 70px;
+    padding: 10px;
+}
+.chat_bottom {
+    float: left;
+    margin-top: 13px;
+    width: 100%;
+}
+.member_list li:hover {
+    background: #428bca none repeat scroll 0 0;
+    color: #fff;
+    cursor:pointer;
+}
+.chat-background {
+    background: rgba(150, 150, 150, 0.4);
+}
+
+#search {
+    background: rgba(50,50,50,0.5);
+    margin-top: 5%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5% 0;
+    color: #fff;
+}
+
+.rzslider .rz-bubble {
+    color: #ffffaa;
+}
+
+.rzslider .rz-bubble.rz-limit {
+    color: #FFF700;
+}
+
+#search .img-s {
+    max-width: 55%;
+}
+
+#search .user-block {
+    border: 2px solid #add8e6;
+    border-radius: 2%;
+    padding: 5% 5% 2% 5%;
+    margin-bottom: 5%;
+}
+
+#profil a {
+    color: #FFF;
+}
+#profil a:hover, .active a {
+    color : #337ab7 !important;
+}
+
+#profil .panel-body { color : #000; }
+
+#notifs p:hover {
+    background: #d7eaff;
+    border-radius: 5%;
+}
+
+.ion-close-circled:hover {
+    color: #ff5247;
+}
+
+.navbar-default .navbar-nav>.open>a , .navbar-default .navbar-nav>.open>a:hover{
+    background-color: #9acfea;
+}
+
+.navbar-default li a:hover {
+    cursor: pointer;
+}
+
+#nbNotif {
+    border-radius: 99%;
+    background: white;
+    padding: 0 3%;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.msg-bulle {
+    padding: 1%;
+    border-radius: 20%;
+}
+
+#chat .active {
+    background: #e5e5e5;
+}
+
+.disab, .disab:hover, a .disab {
+    opacity: 0.65;
+    cursor: not-allowed !important;
+}
+
+.blurredElement {
+
+    /* Any browser which supports CSS3 */
+    filter: blur(4px);
+
+    /* Firefox */
+    /*filter: url("blur.svg#gaussian_blur");*/
+
+    /* Webkit */
+    -webkit-filter: blur(4px);
+
+    /* Opera */
+    -o-filter: blur(4px);
+}

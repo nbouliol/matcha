@@ -1,0 +1,68 @@
+<div class="container" id="search">
+    <div class="row ">
+        <div class="col-sm-8 col-sm-offset-2 row ">
+            <h3 class="text-center">Propositions :</h3>
+            <ng-form name="proposeF">
+                <div class="row ">
+                    <button class="col-sm-4 col-xs-4 col-xs-offset-1 col-sm-offset-1 btn btn-default" ng-click="randoms()">Aléatoire</button>
+                    <button class="col-sm-4 col-xs-4 col-xs-offset-1 col-sm-offset-1 btn btn-default" ng-click="classics()">Classique</button>
+                </div>
+            </ng-form>
+        </div>
+    </div>
+    <div class="row mb5" ng-show="usersProp">
+        <h3 class="text-center mb5">Résultat de la recherche : </h3>
+        <div class="col-sm-4 text-center" ng-repeat="u in usersProp">
+            <div class="user-block">
+                <a href="/#/profil/{{u.user}}">
+                    <img data-ng-src="{{u.img}}" class="img-responsive center-block img-s">
+                    <h4 style="color: #fff;">{{u.user}}<span ng-show="class == true"> - Cote : {{u.score}}</span></h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb5">
+        <div class="col-sm-8 col-sm-offset-2 row ">
+            <h3 class="text-center">Paramètres de la recherche :</h3>
+            <ng-form name="searchForm">
+                <div class="col-sm-6 col-xs-6">
+                    <h4 class="text-center">Tags</h4>
+                    <tags-input ng-model="search.tags" ng-required="true"></tags-input>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                    <h4 class="text-center">Genre</h4>
+                    <label class="radio-inline"><input type="radio" ng-required="!search.interest" ng-model="search.interest" name="interest" value="Homme">Homme</label>
+                    <label class="radio-inline"><input type="radio" ng-required="!search.interest" ng-model="search.interest" name="interest" value="Femme">Femme</label>
+                    <label class="radio-inline"><input type="radio" ng-required="!search.interest" ng-model="search.interest" name="interest" value="Homme & Femme">Homme & Femme</label>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                    <h4 class="text-center">Age</h4>
+                    <rzslider rz-slider-model="minRangeSlider.minValue" rz-slider-high="minRangeSlider.maxValue"
+                              rz-slider-options="minRangeSlider.options"></rzslider>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                    <h4 class="text-center">Cote de popularité :</h4>
+                    <rzslider rz-slider-model="pop.minValue" rz-slider-high="pop.maxValue"
+                              rz-slider-options="pop.options"></rzslider>
+                </div>
+                <div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4 mt5">
+                    <button class="btn btn-group btn-block" ng-click="searchIt()" ng-disabled="searchForm.$invalid"><i class="icon ion-heart-broken"></i> Rechercher !</button>
+                </div>
+            </ng-form>
+        </div>
+    </div>
+    <!--<p class="text-center mt5">{{search}}</p>-->
+    <div class="row" ng-show="searchedUsers">
+        <h3 class="text-center mb5">Résultat de la recherche : </h3>
+        <div class="col-sm-4 text-center" ng-repeat="u in searchedUsers">
+            <div class="user-block">
+                <a href="/#/profil/{{u.user}}">
+                    <img data-ng-src="{{u.img}}" class="img-responsive center-block img-s">
+                    <h4 style="color: #fff;">{{u.user}} - Cote : {{u.score}}</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

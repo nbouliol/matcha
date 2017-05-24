@@ -1,0 +1,37 @@
+<section id="header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/#/profil">MatchÀ</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Notifications - <span id="nbNotif">{{notifications.length}}</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <p ng-repeat="notif in notifications | orderBy : 'date':true " ng-click="accept(username, notif.from)">{{notif.type}} : {{notif.from}} le {{notif.date  | date:'dd/MM/yyyy'}} à {{notif.date | date:'HH:mm' }} <i class="icon ion-close-circled" ng-click="delNotif(notif)"></i></p>
+                        </ul>
+                    </li>
+                    <li><a ng-click="logout()" href="" style="">Logout</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</section>
+
+
+
+
+
+
+<!--<div class="panel-body" id="notifs">-->
+<!--</div>-->

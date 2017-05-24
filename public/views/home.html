@@ -1,0 +1,42 @@
+<section id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center formh">
+                <h2>Connection :</h2>
+                <ng-form name="connectForm">
+                    <input class="center-block form-control input-lg text-center" id="connMail" type="email" ng-required="true" ng-model="connection.mail" placeholder="Adresse mail">
+                    <input class="center-block form-control input-lg text-center" type="password" ng-required="true" ng-model="connection.password" placeholder="Mot de passe">
+                    <p ng-show="fail" class="alert alert-danger">Y'a une couille dans le pâté ma gueule ! Vérifies tes logs ! ;)</p>
+                    <button class="btn btn-lg text-center" type="submit" ng-click="connect()" ng-disabled="connectForm.$invalid">Connection</button>
+                </ng-form>
+                <button class="btn btn-lg text-center" ng-click="fill()">FillIt</button>
+                <h2>Inscription :</h2>
+                <ng-form name="inscriForm">
+                    <input class="center-block form-control input-lg text-center" type="email" ng-required="true" ng-model="inscription.mail" placeholder="Adresse mail">
+                    <input class="center-block form-control input-lg text-center" type="password" ng-required="true" ng-model="inscription.password1" name="p1" ng-pattern="/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{6,}$/" placeholder="Mot de passe">
+                    <p ng-show="inscriForm.p1.$invalid && !inscriForm.p1.$pristine" class="alert alert-danger">Le mot de passe doit contenir au moins 6 charactères, 1 minuscule, 1 majuscule, 1 chiffre</p>
+                    <input class="center-block form-control input-lg text-center" type="password" ng-required="true" ng-model="inscription.password2" name="p2" ng-pattern="inscription.password1" placeholder="Mot de passe">
+                    <p ng-show="inscriForm.p2.$invalid && !inscriForm.p2.$pristine" class="alert alert-danger">Les mots de passe doivent correspondre</p>
+                    <input class="center-block form-control input-lg text-center" type="text" ng-required="true" ng-model="inscription.username" placeholder="Nom d'utilisateur">
+                    <button class="btn btn-lg text-center" type="submit" ng-click="inscri()" ng-disabled="inscriForm.$invalid">Inscription</button>
+                    <h3 ng-show="successInscri" class="alert alert-success">Votre inscription est validée !</h3>
+                    <h3 ng-show="failInscri" class="alert alert-danger">Nom d'utilisateur ou mail déjà prit !</h3>
+                </ng-form>
+
+                <h5 class="mt5" style="cursor: pointer" ng-click="pwd = ! pwd"><i>Mot de passe oublié ?</i></h5>
+                <ng-form name="pwdMailForm" ng-show="pwd">
+                    <input type="email" placeholder="Votre adresse mail" class="center-block form-control input-lg text-center" ng-model="mailToRecover" ng-required="true">
+                    <button class="btn btn-lg text-center" type="submit" ng-click="pwdMail()" ng-disabled="pwdMailForm.$invalid">Réinitialiser !</button>
+                </ng-form>
+                <div class="alert alert-success alert-dismissable fade in col-xs-12" ng-show="Pw">
+                    <a ng-click="Pw  = ! Pw" class="close">&times;</a>
+                    <strong>D'accord !</strong> {{Pw}}
+                </div>
+                <div class="alert alert-danger alert-dismissable fade in col-xs-12" ng-show="ePw">
+                    <a ng-click="ePw  = ! ePw" class="close">&times;</a>
+                    <strong>Nope !</strong> {{ePw}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

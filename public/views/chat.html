@@ -1,0 +1,75 @@
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <ul class="list-group">
+            <li ng-repeat="user in users" class="list-group-item text-muted">
+                {{user}}
+            </li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+
+        </div>
+    </div>
+</div>-->
+
+
+<div class="container" id="chat" ng-class="{blurredElement : noroom }">
+    <div class="chat_container">
+        <div class="col-sm-3 chat_sidebar">
+            <div class="row">
+                <div class="member_list">
+                    <ul class="list-unstyled chat-background">
+                        <li class="left clearfix" ng-repeat="user in rooms" ng-click="loadMessages(user)" ng-class="{active : activeMenu === user}">
+                             <span class="chat-img pull-left">
+                                <!--<img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">-->
+                             </span>
+                            <div class="chat-body clearfix" >
+                                <div class="header_sec">
+                                    <strong class="primary-font">{{user.user}}</strong>
+                                    <!--<strong class="pull-right">09:45AM</strong>-->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--chat_sidebar-->
+
+
+        <div class="col-sm-9 message_section">
+            <div class="row">
+                <div class="chat_area chat-background" id="autoscroll">
+                    <ul class="list-unstyled"  >
+                        <li class="left clearfix" ng-repeat="m in messages">
+                             <span class="chat-img1 pull-left">
+                             <!--<img src="https://lh6.googleusercontent.com/-y-MY2satK-E/AAAAAAAAAAI/AAAAAAAAAJU/ER_hFddBheQ/photo.jpg" alt="User Avatar" class="img-circle">-->
+                             </span>
+                            <div class="chat-body1 clearfix">
+
+                                <span ng-show="m.user == username" style="background: #00A000; float:right" class="msg-bulle">{{m.msg}}</span>
+                                <span ng-show="m.user != username" style="background: #00b3ee; float: left" class="msg-bulle">{{m.msg}}</span>
+                                <!--<div class="chat_time pull-right">09:40PM</div>-->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--chat_area-->
+                <div class="message_write">
+                    <textarea class="form-control" placeholder="Tapotez un message !" ng-disabled="!room" ng-model="msg"></textarea>
+                    <div class="clearfix"></div>
+                    <div class="chat_bottom">
+                        <button class="pull-right btn btn-success"  ng-click="send()" ng-disabled="!room || !msg">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div> <!--message_section-->
+    </div>
+</div>
+</div>
+
+<!--   http://bootsnipp.com/snippets/vrzGb    -->

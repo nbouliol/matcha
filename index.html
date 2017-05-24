@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- Angular -->
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angularjs-geolocation.min.js"></script>
+    <script src="/js/angular-ui-router.js"></script>
+    <script src="/js/angular-cookies.js"></script>
+    <script src="/js/ng-tags-input.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/ng-tags-input.css">
+    <script src="/js/ng-file-upload-all.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/js/ui-bootstrap-tpls.js"></script>
+    <link rel="stylesheet" href="/js/ui-bootstrap-csp.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <!-- Angular-Ranger -->
+    <script src="/js/rzslider.js"></script>
+    <link rel="stylesheet" href="/js/rzslider.css"/>
+
+
+    <script src="/socket/socket.io.js"></script>
+
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/javascript/gservice.js"></script>
+    <script src="/javascript/angularApp.js"></script>
+
+    <link rel="stylesheet" href="/style/main.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU2BGhiaA-ihLZ7ic9n2AMgtxvcooBuPc"></script>
+    <script>
+        $(document).ready(function () {
+            var classCycle=['/style/images/boxin.jpg','/style/images/pregnant.jpg','/style/images/bed.jpg'];
+
+            var randomNumber = Math.floor(Math.random() * classCycle.length);
+            var classToAdd = classCycle[randomNumber];
+
+            $('body').css("background-image", "url('"+classToAdd+"')");
+        });
+    </script>
+
+</head>
+
+<body ng-app="matcha">
+
+<div ui-view="header"></div>
+<div ui-view></div>
+<div ui-view="footer"></div>
+
+</body>
+</html>

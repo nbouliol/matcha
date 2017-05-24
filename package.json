@@ -1,0 +1,36 @@
+{
+  "name": "matcha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/nodemon/bin/nodemon.js server.js"
+  },
+  "author": "nbouliol",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-cookies": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
+    "angular-ui-router": "^0.3.1",
+    "angularjs-geolocation": "^0.1.3",
+    "angularjs-slider": "^5.8.7",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "connect-multiparty": "^2.0.0",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "knuth-shuffle": "^1.0.1",
+    "mongo-express": "^0.31.5",
+    "mongodb": "^2.2.11",
+    "ng-file-upload": "^12.2.13",
+    "ng-tags-input": "^3.1.1",
+    "node-async-loop": "^1.2.2",
+    "node-mailer": "^0.1.1",
+    "nodemailer": "^2.6.4",
+    "nodemon": "^1.11.0",
+    "socket.io": "^1.7.1"
+  }
+}
